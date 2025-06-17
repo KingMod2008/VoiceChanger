@@ -1,0 +1,74 @@
+<Page x:Class="KingVoiceChanger.SoundControlsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="SoundControlsPage">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20">
+            <Label Content="SELECT VOICE EFFECT" Style="{StaticResource HeaderLabelStyle}"/>
+            <Button x:Name="SelectVoiceEffectButton" x:FieldModifier="public" Content="Choose a Voice..." Style="{StaticResource ActionButtonStyle}" Margin="0,5,0,15"/>
+
+            <Grid Margin="0,5,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="MICROPHONE GAIN" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                <Label Grid.Column="1" x:Name="GainValueLabel" x:FieldModifier="public" Content="100%" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+            </Grid>
+            <Slider x:Name="GainSlider" x:FieldModifier="public" Minimum="0" Maximum="3" Value="1" TickFrequency="0.01" IsSnapToTickEnabled="True" Style="{StaticResource ThemedSliderStyle}" Margin="0,0,0,20"/>
+
+            <Grid Margin="0,5,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="MICROPHONE BOOST" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                <Label Grid.Column="1" x:Name="MicBoostValueLabel" x:FieldModifier="public" Content="0%" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+            </Grid>
+            <Slider x:Name="MicBoostSlider" x:FieldModifier="public" Minimum="0" Maximum="3" Value="0" TickFrequency="0.01" IsSnapToTickEnabled="True" Style="{StaticResource ThemedSliderStyle}" Margin="0,0,0,20"/>
+
+            <!-- Advanced Echo Controls -->
+            <StackPanel x:Name="EchoControlsPanel" x:FieldModifier="public" Visibility="Visible">
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="ECHO DELAY (MS)" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                    <Label Grid.Column="1" x:Name="EchoDelayValueLabel" x:FieldModifier="public" Content="200ms" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                </Grid>
+                <Slider x:Name="EchoDelaySlider" x:FieldModifier="public" Minimum="50" Maximum="10000" Value="200" TickFrequency="10" IsSnapToTickEnabled="True" Style="{StaticResource ThemedSliderStyle}" Margin="0,0,0,20"/>
+
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="ECHO FEEDBACK (FADE)" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                    <Label Grid.Column="1" x:Name="EchoFeedbackValueLabel" x:FieldModifier="public" Content="50%" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                </Grid>
+                <Slider x:Name="EchoFeedbackSlider" x:FieldModifier="public" Minimum="0" Maximum="0.95" Value="0.5" TickFrequency="0.05" IsSnapToTickEnabled="True" Style="{StaticResource ThemedSliderStyle}" Margin="0,0,0,20"/>
+
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="ECHO REPEATS (COUNT)" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                    <Label Grid.Column="1" x:Name="EchoRepeatCountValueLabel" x:FieldModifier="public" Content="5" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                </Grid>
+                <Slider x:Name="EchoRepeatCountSlider" x:FieldModifier="public" Minimum="1" Maximum="20" Value="5" TickFrequency="1" IsSnapToTickEnabled="True" Style="{StaticResource ThemedSliderStyle}" Margin="0,0,0,20"/>
+
+                <Grid Margin="0,5,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="ECHO SPEED (MS)" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                    <Label Grid.Column="1" x:Name="EchoSpeedValueLabel" x:FieldModifier="public" Content="200ms" Style="{StaticResource HeaderLabelStyle}" VerticalAlignment="Center"/>
+                </Grid>
+                <Slider x:Name="EchoSpeedSlider" x:FieldModifier="public" Minimum="50" Maximum="10000" Value="200" TickFrequency="10" IsSnapToTickEnabled="True" Style="{StaticResource ThemedSliderStyle}" Margin="0,0,0,20"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

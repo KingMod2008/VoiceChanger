@@ -1,0 +1,21 @@
+<Page x:Class="KingVoiceChanger.VoiceSelectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Select Voice Effect">
+    <Grid>
+        <ListBox x:Name="VoiceEffectsListBox" 
+                 SelectionChanged="VoiceEffectsListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Image Source="{Binding IconPath}" Width="40" Height="40" Margin="0,0,10,0"/>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Description}" Foreground="Gray"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

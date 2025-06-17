@@ -1,0 +1,59 @@
+## Ignore Visual Studio temporary files, build results, and generated files
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+# Visual Studio 2017 cache/options directory
+.vs/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUnit
+*.nunit
+*.testresult
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+[Uu]nicode [Dd]ebug/
+[Uu]nicode [Rr]elease/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if you are using a packages.config file
+#packages.config
+
+# Windows Installer XML (WiX) toolset
+*.wixobj
+*.wixpdb
+*.wixproj.user
+
+# Visual Studio Code files
+.vscode/
+
+# Rider files
+.idea/
